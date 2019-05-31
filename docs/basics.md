@@ -2,7 +2,7 @@
 
 As mentioned before, `urql`'s core logic is split into exchanges.
 To that end, `urql`'s behaviour is completely defined by the exchanges
-you pass to it or that are the default ones.
+you pass to it, or that are the default ones.
 
 This document goes through the exchanges that `urql` adds by default.
 When you create a client and pass no `exchanges` array some are added
@@ -30,7 +30,7 @@ to send GraphQL API requests.
 > polyfill to your app.
 
 It also supports cancellation. When an operation becomes "stale", meaning a
-component that requested it has unmounted for instance, a `teardown`
+component that requested it has unmounted, for instance, a `teardown`
 operation is sent which can cause `fetch` to abort ongoing requests
 when necessary.
 
@@ -70,7 +70,7 @@ unlike Apollo's `Cache` or `InMemoryCache`, caching behaviour is handled as
 part of the request pipeline, which makes customisation a lot easier as
 there's no extra API to learn.
 
-By default however, `urql`'s caching behaviour is not that of a _"normalising
+By default, however, `urql`'s caching behaviour is not that of a _"normalising
 cache"_ but more of a _"document cache"_.
 
 ### The document cache
@@ -155,7 +155,7 @@ from the API.
 The idea of `urql` is that you can customise the caching behaviour amongst
 other things yourself, if needed.
 
-[Read more about customising `urql` in the "Extending & Experimenting" section.](extending-and-experimenting.md)
+[Read more about customising `urql` in the "Extending & Experimenting" section.](https://github.com/FormidableLabs/urql/blob/master/docs/extending-and-experimenting.md)
 
 ## Subscriptions
 
@@ -232,7 +232,7 @@ into another component and combine it.
 The `useSubscription` hooks comes with a similar API to `useQuery`.
 It will accept `query` and `variables` as options.
 
-Additionally the second argument for this hook can be a "reducer function".
+Additionally, the second argument for this hook can be a "reducer function".
 This function is similar to what you would pass to `Array.prototype.reduce`.
 
 It receives the previous set of data that this function has returned or `undefined`.
@@ -241,7 +241,7 @@ You can use this to accumulate the data over time, which is useful for a
 list for example.
 
 In the following example, we create a subscription that informs us of
-new messages. We will concatenate the incoming messages, so that we
+new messages. We will concatenate the incoming messages so that we
 can display all messages that have come in over the subscription across
 events.
 
